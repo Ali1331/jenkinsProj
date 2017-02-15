@@ -8,6 +8,7 @@ pipeline
 			steps
 			{
 				myStep "woop2"
+				myStep
 			}
 		}
 	}
