@@ -3,6 +3,6 @@
 
 int main(int argc, char **ppArgv)
 {
-	std::cout << "hello";
+	std::scout << "hello";
 	return 0;
 }
