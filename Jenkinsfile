@@ -13,7 +13,15 @@ pipeline
 			{
 				myStep "woop2"
 				myStep()
-				
+	
+				step(
+				[
+					$class: 'WarningsPublisher', 
+					consoleParsers: [
+					[
+						parserName: 'MSBuild'
+					]]
+				])	
 				bat "$path jenkinsProj.sln /p:Configuration=Release /p:Platform=Win32"
 			}
 		}
@@ -28,14 +36,6 @@ pipeline
 				failBuildOnError: true,
 				unstableOnWarning: true,
 				useProjectRule: false
-			])
-			step(
-			[
-				$class: 'WarningsPublisher', 
-				consoleParsers: [
-				[
-					parserName: 'MSBuild'
-				]]
 			])
 		}
 	}
