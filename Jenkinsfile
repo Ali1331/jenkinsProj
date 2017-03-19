@@ -26,17 +26,4 @@ pipeline
 			}
 		}
 	}
-	post
-	{
-		always
-		{
-			step(
-			[
-				$class: 'LogParserPublisher',
-				failBuildOnError: true,
-				unstableOnWarning: true,
-				useProjectRule: false
-			])
-		}
-	}
 }
