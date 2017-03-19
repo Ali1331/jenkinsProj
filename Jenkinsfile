@@ -22,6 +22,7 @@ pipeline
 	{
 		always
 		{
+			currentBuild.result = "SUCCESS"
 			step(
 			[
 				$class: 'WarningsPublisher', 
