@@ -17,6 +17,8 @@ pipeline
 				step(
 				[
 					$class: 'WarningsPublisher', 
+					canComputeNew: false,
+					canRunOnFailed: true, 
 					consoleParsers: [
 					[
 						parserName: 'MSBuild'
