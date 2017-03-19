@@ -14,7 +14,7 @@ pipeline
 				myStep "woop2"
 				myStep()
 				
-				bat "$path jenkinsProj.sln /p:Configuration=Release /p:Platform:Win32"
+				bat "$path jenkinsProj.sln /p:Configuration=Release /p:Platform=Win32"
 			}
 		}
 	}
