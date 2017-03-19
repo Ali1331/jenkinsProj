@@ -1,3 +1,7 @@
+#!groovy
+
+def path = 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe'
+
 pipeline
 {
 	agent any
@@ -10,7 +14,7 @@ pipeline
 				myStep "woop2"
 				myStep()
 				
-				bat "\"C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe\" jenkinsProj.sln /p:Configuration=Release /p:Platform:Win32 -v m"
+				bat "$path jenkinsProj.sln /p:Configuration=Release /p:Platform:Win32 -v m"
 			}
 		}
 	}
