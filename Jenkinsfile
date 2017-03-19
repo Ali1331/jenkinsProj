@@ -26,7 +26,7 @@ pipeline
 			[
 				$class: 'WarningsPublisher', 
 				canRunOnFailed: true, 
-				useStableBuildAsReference: true
+				useStableBuildAsReference: true,
 				consoleParsers: [
 				[
 					parserName: 'MSBuild'
