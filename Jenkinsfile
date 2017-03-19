@@ -22,7 +22,13 @@ pipeline
 	{
 		always
 		{
-			currentBuild.result = "SUCCESS"
+			step(
+			[
+				$class: 'LogParserPublisher',
+				failBuildOnError: true,
+				unstableOnWarning: true,
+				useProjectRule: false
+			])
 			step(
 			[
 				$class: 'WarningsPublisher', 
